@@ -10,9 +10,7 @@ function brocode(){
 
  if(hour>=12){
    
-    hour= Number(hour);
-     hour = hour-12;
-     document.getElementById("hour").innerHTML = hour;
+    
      document.getElementById("mode").innerHTML = "PM";
  }
  else if(hour<=12){
