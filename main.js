@@ -1,21 +1,18 @@
 function brocode(){
-   var neram = new Date();
-   var hour = neram.getHours();
-   var min = neram.getMinutes();
-   var sec = neram.getSeconds();
-
- document.getElementById("min").innerHTML = min;
- document.getElementById("sec").innerHTML = sec;
- hour= Number(hour);
-
+   var time = new Date();
+   var hour = time.getHours();
+   var min = time.getMinutes();
+   var sec = time.getSeconds();
  if(hour>=12){
-   
-    
      document.getElementById("mode").innerHTML = "PM";
+        hour=hour-12;
  }
- else if(hour<=12){
-  
+ else if(hour<12){
     document.getElementById("mode").innerHTML = "AM";
 }
+document.getElementById("hour").innerHTML = hour;
+document.getElementById("min").innerHTML = min;
+document.getElementById("sec").innerHTML = sec;
+hour= Number(hour);
 }
-setInterval(brocode,10);
+setInterval(brocode,100);
